@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>PROIECT P.A.</title>
+	<script>
+		
+		var nrs = new Array();
+		var cont = 1;
+		
+		function GenNumbersArea()
+		{
+			var GenNumbersID = document.getElementById('GenNumbersID')
+			if(document.getElementById('cate').value=="")
+			{
+				GenNumbersID.value =""
+				GenNumbersID.placeholder = 'Set how many numbers to generate in the text box above'
+			}
+		}
+		
+		function SortedNbrsArea()
+		{
+			var SortedResultID = document.getElementById('SortedResultID')
+			if(document.getElementById('cate').value=="")
+			{
+				SortedResultID.value =""
+				SortedResultID.placeholder = 'Set how many numbers to generate in the text box above'
+			}
+		}
+		
+		function GeneratedNumbers()
+		{	
+			if(document.getElementById('cate').value>0 && document.getElementById('cate').value<99999)
+			{
+				nrs=[];
+				for(cont=1; cont<=document.getElementById('cate').value; cont++)
+				{
+					//nrs[cont-1] = Math.floor((50-0)*Math.random());
+					var randomnumber = Math.floor(Math.random() * 101) - 50;
+					if(nrs.indexOf(randomnumber) > -1) continue;
+					nrs[nrs.length] = randomnumber;
+				}
+				document.getElementById('genButton').value = "Generate"
+				GenNumbersID.value = nrs
+			}
+			else if(document.getElementById('cate').value=="")
+			{
+				document.getElementById('GenNumbersID').value =""
+				document.getElementById('GenNumbersID').placeholder = 'Set how many numbers to generate in the text box above'
+			}
+			else
+			{
+				document.getElementById('GenNumbersID').value =""
+				document.getElementById('GenNumbersID').placeholder = 'Insert a valid value'
+			}
+		}
+		
+		function SortedResult()
+		{
+			if(document.getElementById('GenNumbersID').value == "" && document.getElementById('cate').value=="")
+			{
+				document.getElementById('SortedResultID').value =""
+				document.getElementById('SortedResultID').placeholder = 'Set how many numbers to generate in the text box above';
+			}
+			else if(document.getElementById('GenNumbersID').value == "" && document.getElementById('cate').value > 0)
+			{
+				document.getElementById('SortedResultID').value =""
+				document.getElementById('SortedResultID').placeholder = 'Hit the generate numbers button';
+			}
+			else if(document.getElementById('GenNumbersID').value != "" && document.getElementById('asce').checked == false && document.getElementById('desc').checked == false)
+			{
+				document.getElementById('SortedResultID').value =""
+				document.getElementById('SortedResultID').placeholder = 'Chose the type of sort';
+			}
+			else if(document.getElementById('GenNumbersID').value != "" && document.getElementById('desc').checked)
+			{
+				SortedResultID.value = nrs.sort(function(a, b){return b-a})
+			}
+			else if(document.getElementById('GenNumbersID').value != "" && document.getElementById('asce').checked)
+			{
+				SortedResultID.value = nrs.sort(function(a, b){return a-b})
+			}
+			else
+			{
+				document.getElementById('SortedResultID').value =""
+				document.getElementById('SortedResultID').placeholder = 'Insert a valid value';
+			}
+		}
+		
+		function getCate()
+		{
+			var cate = document.getElementById('cate').value
+			if(cate > 0 && cate <99999)
+			{
+				var x = document.getElementById('genButton');
+				x.value = 'Generate '+cate+' numbers';
+			}
+			else if(cate == "")
+			{
+				document.getElementById('GenNumbersID').value =""
+				document.getElementById('GenNumbersID').placeholder = 'Set how many numbers to generate in the text box above';
+			}
+			else
+			{
+				document.getElementById('GenNumbersID').value =""
+				document.getElementById('GenNumbersID').placeholder = 'Insert a valid value';
+			}
+		}
+		
+	</script>
+<style>
+
+.button {
+  cursor: pointer;
+  outline: none;
+  color: #fff;
+  background-color: #505050;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 9px #999;
+  margin: auto; 
+}
+
+.button:hover {
+  background-color: #000000
+  }
+
+.button:active {
+  background-color: #000000;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+
+.option {
+	color: white;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+.option input {
+    display: none;
+}
+
+.option:hover {
+    color: gray;
+}
+.option input[type=radio]:checked + span{
+    color: black;
+    font-style: normal;
+}
+
+</style>
+</head>		 
+<body style="background:url(image2.jpg); background-size: 100% 100%; background-repeat: no-repeat; background-attachment:fixed; background-position:center;">
+	<form> 
+	<center>
+	<table style="width:100%">
+		<tr>
+			<th><input style="font-weight:bold; text-align:center; font-size:10pt; height:50px; width:200px;"   type="text"     value = ""		placeholder="How many numbers?"  		 	 id = "cate" onkeypress="javascript: if(event.keyCode==13) getCate()"> 
+			<th><br><br><br><br><br><br><label class="option"><input 	 										type="radio"    name="option" 							 	 			 	 id = "asce" ><span>1<big><big>2<big><big>3</span></label>&nbsp&nbsp
+										<label class="option"><input 	 										type="radio"    name="option" 							 	 			 	 id = "desc" ><span><big><big><big><big>3<small><small>2<small><small>1</span></label><br><br><br>
+		</tr>
+		<tr>
+			<th><input style="text-align:center; font-size:15pt; height:100px; width:230px;" class="button"     type = "button" value = "Generate" 		  onclick = "GeneratedNumbers()"  	 id = "genButton"><br><br><br><br><br><br>
+			<th><input style="text-align:center; font-size:15pt; height:100px; width:230px;" class="button"     type = "button" value = "Sort" 			  onclick = "SortedResult()"><br><br><br><br><br><br>
+		</tr>
+		<tr>
+			<th><input style="font-weight:bold; text-align:center; font-size:10pt; height:100px; width:550px;"  type="text"     value="" 				  onclick="GenNumbersArea()" 	 	 id = "GenNumbersID"    readonly>
+			<th><input style="font-weight:bold; text-align:center; font-size:10pt; height:100px; width:550px;"  type="text"  							  onclick="SortedNbrsArea()"	 	 id = "SortedResultID"  readonly>
+		</tr>
+	</table>
+	</center>
+	</form>
+</body>
+</html>
