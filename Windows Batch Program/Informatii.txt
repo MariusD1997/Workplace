@@ -1,0 +1,1 @@
+Calea trebuie rescrisa daca se schimba locatia celor doua fisiere (Base si Desination)
