@@ -1,0 +1,15 @@
+femur	2
+rotula	2
+fibula	2
+tibie	2
+talus	2
+calcaneu	2
+navicular	2
+cuneiform_medial	2
+cuneiform_intermediar	2
+cuneiform_lateral	2
+cuboid	2
+metatarsiene	10
+falange_distale	5
+falange_intermediare	4
+falange_proximale	5

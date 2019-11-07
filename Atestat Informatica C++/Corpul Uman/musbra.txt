@@ -1,0 +1,17 @@
+coracobranchialis	2.5
+biceps	10.5
+branchialis	7.3
+branchioradialis	6.5
+flexor_carpi	6.2
+thenar	2.1
+hyponthenar	1.2
+flexor_carpi	15.3
+palmaris_lung	6.5
+pronotor_teres	4.2
+teres_minor	4.5
+teres_major	5.5
+triceps	12.5
+extensor_carpi	5.5
+extensor_digitorum	8.5
+extensor_ulnaris	8.3
+pectoralis_major	11.5

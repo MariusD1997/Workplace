@@ -1,0 +1,8 @@
+Nume: Corbei
+Prenume: Octavian - Ionut
+Data nasterii: 11.07.1997
+Domiciliu: Cintei
+Sportul preferat: Baschet
+Hobby-uri:Imi place sa ascult muzica,
+sa ma uit la filme,sa ma joc pe
+calculator.

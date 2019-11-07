@@ -1,0 +1,8 @@
+Nume: Dudas
+Prenume: Marius 
+Data nasterii: 13.07.1997
+Domiciliu: Cintei
+Sportul preferat: fotbal
+Hobby-uri:Imi place sa ascult muzica,
+sa ma uit la filme,sa ma joc pe
+calculator.

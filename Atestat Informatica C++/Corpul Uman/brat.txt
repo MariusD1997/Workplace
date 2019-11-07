@@ -1,0 +1,15 @@
+humerus	2
+radius	2
+ulna	2
+os_trapez	2
+os_trapezoid	2
+os_capitat	2
+os_cu_carlig	2
+os_pisiform	2
+os_piramidal	2
+os_semilunar	2
+os_scafoid	2
+oase_metacarpiene	10
+falange_distale	10
+falange_intermediare	8
+falange_proximale	10
