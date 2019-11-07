@@ -1,0 +1,27 @@
+v1.0
+Programul contine un sistem de adaugare si stergere a datelor din 2 tabele respectiv studenti si profesori
+v2.0
+-adaugat un buton pentru salvarea datelor din cele 2 tabele in mod individual
+-adaugat un buton pentru incarcarea de date in cele 2 tabele in mod individual
+v3.0
+-adaugate butoane speciale modificate pentru adaugarea si stergerea datelor din cele 2 tabele
+v4.0
+-simplificat modul de adaugare si stergere a datelor din tabele
+	-butonul de adaugare este inlocuit de tasta enter in al 3-lea camp de date (textbox respectiv combobox)
+	-butonul de stergere a fost inlocuit de tasta delete
+v4.0.1
+-reintroduse functiile "OpenFileDialog" si "SaveFileDialog" pentru butoanele de incarcare si salvare
+*v4.1
+-introdusa o metora de salvare a ambelor tabele intr-un singur fisier (.csv)
+v5.0
+-introdus cate un textbox pentru cautarea de date din fiecare tabel
+-datele din tabele se vor salva din nou in fisiere (.csv) in locatia executabilului
+v5.1
+-reintroduse functiile "OpenFileDialog" si "SaveFileDialog" pentru butoanele de incarcare si salvare
+-introduse variabilele studisloadedfft, profisloadedfft, studlocation si proflocation pentru a detecta daca datele sunt incarcate in 
+ tabele pentru prima data astfel incat daca stergeti intreaga lista prin butonul "Elimina tot" la apasarea butonului 
+ de incarcare a datelor nu va mai trebui sa selectati locatia fisierului pentru ca acesta se stie deja
+
+
+----------------------------------------------------------------------------------------------------------------
+*-versiuni partial functionabile
